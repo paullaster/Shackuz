@@ -1,0 +1,46 @@
+{
+  "name": "@bs/shackuz",
+  "version": "1.0.0",
+  "description": "Nodejs Email Templating Engine",
+  "main": "dist/server.js",
+  "types": "dist/server.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/server.js",
+      "import": "./dist/server.js",
+      "types": "./dist/server.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paullaster/Shackuz.git"
+  },
+  "keywords": [
+    "NODEJS",
+    "JAVASCRIPT",
+    "EXPRESSJS",
+    "EMAILING"
+  ],
+  "author": "Paullaster Okoth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paullaster/Shackuz/issues"
+  },
+  "homepage": "https://github.com/paullaster/Shackuz#readme",
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
