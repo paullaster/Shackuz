@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # Configurable variables
-DEFAULT_BRANCH="master"
+DEFAULT_BRANCH="development"
 PACKAGE_JSON="package.json"
 
 # Step 1: Ensure clean working directory
