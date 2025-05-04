@@ -1,6 +1,6 @@
 {
   "name": "@bs/shackuz",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Nodejs Email Templating Engine",
   "main": "dist/server.js",
   "types": "dist/server.d.ts",
