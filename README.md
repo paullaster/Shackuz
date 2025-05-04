@@ -1,4 +1,4 @@
-# @bs/Shackuz
+# @brainspore/Shackuz
 
 ## Overview
 
@@ -20,15 +20,15 @@
 ## Installation
 
 ```bash
-npm install @bs/Shackuz
+npm install @brainspore/Shackuz
 # or
-yarn add @bs/Shackuz
+yarn add @brainspore/Shackuz
 ```
 
 ## Usage
 
 ```typescript
-import /* exported members */ "@bs/Shackuz";
+import /* exported members */ "@brainspore/Shackuz";
 
 // Example usage
 import { EmailTemplateBuilder } from "../server";

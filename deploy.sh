@@ -44,5 +44,5 @@ if command -v gh &>/dev/null; then
   gh release create "v$NEW_VERSION" --title "v$NEW_VERSION" --notes "Release v$NEW_VERSION"
 fi
 
-echo "✅ Deployment complete: v$NEW_VERSION published and pushed."
+echo "Deployment complete: v$NEW_VERSION published and pushed."
 
