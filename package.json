@@ -11,25 +11,18 @@
       "types": "./dist/server.d.ts"
     }
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
-    "test": "jest"
+    "test": "jest --runInBand --passWithNoTests"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/paullaster/Shackuz.git"
   },
-  "keywords": [
-    "NODEJS",
-    "JAVASCRIPT",
-    "EXPRESSJS",
-    "EMAILING"
-  ],
+  "keywords": ["NODEJS", "JAVASCRIPT", "EXPRESSJS", "EMAILING"],
   "author": "Paullaster Okoth",
   "license": "MIT",
   "bugs": {
