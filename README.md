@@ -47,6 +47,61 @@ const email = new EmailTemplateBuilder({
 console.log(email);
 ```
 
+## Testing
+
+This package uses [Jest](https://jestjs.io/) with [ts-jest](https://kulshekhar.github.io/ts-jest/) for TypeScript support.
+
+### Running Tests
+
+To run the test suite:
+
+```bash
+npm test
+```
+
+or
+
+```bash
+npm run test
+```
+
+This will execute all `.test.ts` files in the `test/` directory using Jest and ts-jest.
+
+### Example Test
+
+See `test/email-template-usage.test.ts` for a sample test that verifies the output of `EmailTemplateBuilder`:
+
+```typescript
+import { EmailTemplateBuilder } from "../server";
+
+describe("EmailTemplateBuilder", () => {
+  it("builds correct HTML output with all blocks", () => {
+    const html = new EmailTemplateBuilder({
+      appConfig: { title: "Test this tool" }
+    })
+      .addBlock("h", "Welcome to Shackuz!")
+      .addBlock("p", "Hello {{name}},\n\nThank you for joining us.")
+      .addBlock("d")
+      .addBlock("p", "Regards")
+      .addBlock("p", "Shackuz")
+      .buildHTML();
+
+    [
+      "Welcome to Shackuz!",
+      "Hello {{name}},",
+      "Thank you for joining us.",
+      "Regards",
+      "Shackuz"
+    ].forEach((text) => expect(html).toContain(text));
+  });
+});
+```
+
+### Notes
+
+- Make sure you have installed all dev dependencies (`jest`, `ts-jest`, `@types/jest`).
+- Jest is configured via `jest.config.js` to work with TypeScript out of the box.
+
 ## Automatic Deployment
 
 This package includes a top-tier deployment script (`deploy.sh`) that automates the entire release process:
