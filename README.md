@@ -67,12 +67,6 @@ To run all tests, use:
 npm test
 ```
 
-Or to run only the top-level tests in the `test/` directory:
-
-```bash
-npm run test:top
-```
-
 ## Deployment
 
 This package includes a deployment script (`deploy.sh`) for automated releases. See the Deployment section in this README for details.
