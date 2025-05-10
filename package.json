@@ -15,7 +15,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node scripts/esm-fix.js dist",
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
     "test": "jest --runInBand --passWithNoTests"
@@ -37,7 +37,10 @@
   },
   "homepage": "https://github.com/paullaster/Shackuz#readme",
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "@types/node": "^22.15.3",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.2",
     "typescript": "^5.0.0"
   },
   "engines": {
